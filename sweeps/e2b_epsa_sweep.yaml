@@ -1,0 +1,9 @@
+# E2b -- H-DPBA budget sensitivity: eps_a x passes R.
+base: configs/e2_pilot.yaml
+seeds: [42, 123, 2024]
+grid:
+  eps_assign: [0.1, 0.2, 0.5, 1.0]
+  assign_passes: [1, 2, 3]
+fixed:
+  assignment: hdpba
+  method: escs

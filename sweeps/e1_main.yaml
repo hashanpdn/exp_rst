@@ -1,0 +1,11 @@
+# E1 -- Main comparison (RQ2/C2): assignment x weighting on one dataset/partition.
+# Run once per dataset/partition by editing `fixed:` (or copy this file).
+base: configs/e1_main.yaml
+seeds: [42, 123, 2024, 7, 99]
+grid:
+  method: [bl1, bl2, escs, esca, auto]
+  assignment: [random, hdpba]
+fixed:
+  dataset: mnist
+  partition: pathological
+  classes_per_client: 2

@@ -1,0 +1,23 @@
+# E1 main comparison cell template (heterogeneity is the headline).
+# Training DP: CG-NG small-noise LDP-style (matches the published study's
+# philosophy); assignment privacy is the formal guarantee.
+name: e1_main
+dataset: mnist
+partition: pathological
+classes_per_client: 2
+num_clients: 100
+num_edges: 20
+global_rounds: 50
+intermediate_rounds: 2
+local_epochs: 6
+client_frac: 0.5
+lr: 0.05
+dp_mode: cg-ng
+clip: 5.0
+sigma: 0.02
+method: auto
+tau: 0.15
+assignment: hdpba
+eps_assign: 0.2
+eps_agg: 0.1
+assign_passes: 2

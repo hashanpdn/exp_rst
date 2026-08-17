@@ -1,0 +1,8 @@
+# E7 -- Heterogeneity allocation (RQ6/C6): (E,U) at fixed E*U=12.
+base: configs/e1_main.yaml
+seeds: [42, 123, 2024]
+grid:
+  assignment: [random, hdpba]
+fixed:
+  method: escs
+# run 4x with: --local_epochs 6 --intermediate_rounds 2 / 4,3 / 3,4 / 2,6

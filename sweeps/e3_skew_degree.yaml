@@ -1,0 +1,10 @@
+# E3 -- Skew-degree sweep (RQ3/C3): does the ESCA-ESCS gap track skew, and
+# does H-DPBA close it at every level?
+base: configs/e1_main.yaml
+seeds: [42, 123, 2024]
+grid:
+  classes_per_client: [2, 5, 10]
+  method: [escs, esca]
+  assignment: [random, hdpba]
+fixed:
+  partition: pathological

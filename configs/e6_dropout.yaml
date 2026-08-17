@@ -1,0 +1,16 @@
+# E6 edge-dropout robustness. Sweep --edge_frac {1.0,0.9,0.8,0.6}
+# x --assignment {random,hdpba}
+name: e6_dropout
+dataset: mnist
+partition: pathological
+classes_per_client: 2
+num_clients: 100
+num_edges: 20
+global_rounds: 50
+edge_frac: 1.0
+method: escs
+assignment: hdpba
+dp_mode: cg-ng
+clip: 5.0
+sigma: 0.02
+lr: 0.05

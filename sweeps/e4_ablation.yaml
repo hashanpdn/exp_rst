@@ -1,0 +1,9 @@
+# E4 -- Component ablation factorial (RQ2): edge x central x assignment.
+base: configs/e1_main.yaml
+seeds: [42, 123, 2024]
+grid:
+  edge_weighting: [uniform, samplesize]
+  central_weighting: [uniform, avg_samplesize, accuracy]
+  assignment: [random, hdpba]
+fixed:
+  method: ""          # empty preset -> explicit edge/central fields are used

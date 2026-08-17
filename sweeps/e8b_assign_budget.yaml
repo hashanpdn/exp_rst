@@ -1,0 +1,12 @@
+# E8b -- Assignment budget sensitivity (the FORMAL privacy axis):
+# eps_a levels; eps_agg coupled at eps_a/2 must be set per run below.
+base: configs/e2_pilot.yaml
+seeds: [42, 123, 2024]
+grid:
+  eps_assign: [0.1, 0.2, 0.5, 1.0]
+fixed:
+  method: auto
+  dataset: mnist
+# NOTE: pair eps_agg = eps_assign/2 by running 4 sub-sweeps or via CLI:
+#   python -m hdpba_hfl.train --config configs/e2_pilot.yaml \
+#       --eps_assign 0.5 --eps_agg 0.25 ...

@@ -1,0 +1,7 @@
+# E2 -- Private assignment quality vs oracle (RQ1/C1, Gate G1).
+base: configs/e2_pilot.yaml
+seeds: [42, 123, 2024]
+grid:
+  assignment: [random, oracle, nonprivate, rr, hdpba]
+fixed:
+  method: escs

@@ -1,0 +1,11 @@
+# E8 (revised) -- Training-noise sensitivity under CG-NG (LDP-style):
+# does H-DPBA's heterogeneity benefit survive increasing perturbation?
+# sigma=0.0 is the no-training-noise control.
+base: configs/e1_main.yaml
+seeds: [42, 123, 2024]
+grid:
+  sigma: [0.0, 0.02, 0.05, 0.1]
+  assignment: [random, hdpba]
+fixed:
+  dp_mode: cg-ng
+  method: auto

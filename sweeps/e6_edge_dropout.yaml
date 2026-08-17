@@ -1,0 +1,15 @@
+# E6 -- Edge-dropout robustness (RQ5/C5, headline figure).
+# base: configs/e6_dropout.yaml
+# seeds: [42, 123, 2024, 7, 99]
+# grid:
+#   edge_frac: [1.0, 0.9, 0.8, 0.6]
+#   assignment: [random, hdpba]
+#   method: [escs, esca]
+
+
+base: configs/e6_dropout.yaml
+seeds: [42, 123]
+grid:
+  edge_frac: [1.0, 0.9, 0.8, 0.6]
+  assignment: [random, hdpba]
+  method: [escs]

@@ -1,0 +1,24 @@
+# E2 pilot (Gate G1): private ASSIGNMENT quality vs oracle, k=2 non-IID.
+# Training DP: CG-NG (per-batch clip-gradient + noise-gradient, LDP-style,
+# small noise) — verified utility-viable at clip=5.0, sigma=0.02, lr=0.05.
+# NOTE: eps_total covers the ASSIGNMENT mechanism only (formal); cg-ng
+# training noise is LDP-style and not composed (see README, Design note 2).
+name: e2_pilot
+dataset: synthetic          # swap to mnist for the real pilot
+partition: pathological
+classes_per_client: 2
+num_clients: 100
+num_edges: 20
+global_rounds: 50
+intermediate_rounds: 2
+local_epochs: 6
+client_frac: 0.5
+lr: 0.05                    # tune per dataset over {0.1, 0.05, 0.01}
+dp_mode: cg-ng
+clip: 5.0
+sigma: 0.02
+method: escs
+assignment: hdpba
+eps_assign: 0.2
+eps_agg: 0.1
+assign_passes: 2
